@@ -13,6 +13,14 @@ module.exports = {
   			sm: 'calc(var(--radius) - 4px)'
   		},
   		colors: {
+  			// Custom color palette for the project
+  			'teal': '#006D77',
+  			'coral': '#FF6B6B',
+  			'yellow': '#FFD166',
+  			'mint': '#B8F2E6',
+  			'charcoal': '#2F2F2F',
+  			'off-white': '#FAFAFA',
+  			// ShadCN colors
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
