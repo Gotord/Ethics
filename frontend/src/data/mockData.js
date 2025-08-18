@@ -124,6 +124,20 @@ export const negativeExamples = [
     description: 'Sharing personal information or photos of others without permission.',
     icon: 'Lock',
     image: 'https://images.unsplash.com/photo-1633265486064-086b219458ec?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwzfHxvbmxpbmUlMjBzYWZldHl8ZW58MHx8fHwxNzU1NTYwNzE4fDA&ixlib=rb-4.1.0&q=85'
+  },
+  {
+    id: 4,
+    title: 'Hate Speech',
+    description: 'Posting discriminatory or offensive content targeting individuals or groups.',
+    icon: 'Ban',
+    image: 'https://images.unsplash.com/photo-1649389966541-12af5cb7efa0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzZ8MHwxfHNlYXJjaHwxfHxjeWJlcmJ1bGx5aW5nJTIwcHJldmVudGlvbnxlbnwwfHx8fDE3NTU1NjA3MTJ8MA&ixlib=rb-4.1.0&q=85'
+  },
+  {
+    id: 5,
+    title: 'Digital Plagiarism',
+    description: 'Copying and sharing others\' work, ideas, or content without giving proper credit.',
+    icon: 'Copy',
+    image: 'https://images.unsplash.com/photo-1633265486064-086b219458ec?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwzfHxvbmxpbmUlMjBzYWZldHl8ZW58MHx8fHwxNzU1NTYwNzE4fDA&ixlib=rb-4.1.0&q=85'
   }
 ];
 
