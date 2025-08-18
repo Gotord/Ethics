@@ -45,7 +45,7 @@ const Footer = () => {
             <div className="flex items-center justify-center gap-2 text-white/60 text-sm">
               <span>Made with</span>
               <Heart size={16} className="text-coral" />
-              <span>for digital literacy education</span>
+              <span>by Gotord.</span>
             </div>
             <p className="text-white/40 text-xs mt-2">
               © 2025 - Ethical Behavior on Social Media Educational Project
