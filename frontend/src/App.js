@@ -1,38 +1,49 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import axios from "axios";
-
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
+import HeroSection from "./components/HeroSection";
+import EthicalValuesSection from "./components/EthicalValuesSection";
+import ImpactSection from "./components/ImpactSection";
+import ExamplesSection from "./components/ExamplesSection";
+import TestimonialsSection from "./components/TestimonialsSection";
+import BullyingSection from "./components/BullyingSection";
+import EthicsChecklistSection from "./components/EthicsChecklistSection";
+import QuizSection from "./components/QuizSection";
+import CallToActionSection from "./components/CallToActionSection";
+import Footer from "./components/Footer";
+import { Toaster } from "./components/ui/toaster";
 
 const Home = () => {
-  const helloWorldApi = async () => {
-    try {
-      const response = await axios.get(`${API}/`);
-      console.log(response.data.message);
-    } catch (e) {
-      console.error(e, `errored out requesting / api`);
-    }
+  // Smooth scrolling utility
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    element?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  // Add smooth scrolling to the entire page
   useEffect(() => {
-    helloWorldApi();
+    document.documentElement.style.scrollBehavior = 'smooth';
+    return () => {
+      document.documentElement.style.scrollBehavior = 'auto';
+    };
   }, []);
 
   return (
-    <div>
-      <header className="App-header">
-        <a
-          className="App-link"
-          href="https://emergent.sh"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="https://avatars.githubusercontent.com/in/1201222?s=120&u=2686cf91179bbafbc7a71bfbc43004cf9ae1acea&v=4" />
-        </a>
-        <p className="mt-5">Building something incredible ~!</p>
-      </header>
+    <div className="min-h-screen">
+      <HeroSection 
+        onStartLearning={() => scrollToSection('ethical-values')}
+        onTakeQuiz={() => scrollToSection('quiz')}
+      />
+      <EthicalValuesSection />
+      <ImpactSection />
+      <ExamplesSection />
+      <TestimonialsSection />
+      <BullyingSection />
+      <EthicsChecklistSection />
+      <QuizSection />
+      <CallToActionSection />
+      <Footer />
+      <Toaster />
     </div>
   );
 };
